@@ -1,6 +1,13 @@
 #/bin/sh
 
 PLUGINDIR="$HOME/.config/zsh/plugins/"
+
+if [-d "$PLUGINDIR"]; then
+	echo 'plugins directory found'
+else
+	mkdir -p $PLUGINDIR
+fi
+
 echo "Cloning plugins to $PLUGINDIR"
 
 echo "Downloadging Fast Syntax Highlighting"
